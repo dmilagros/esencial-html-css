@@ -1,40 +1,81 @@
-html {
-  /* el html tiene por defecto 16px, no es necesario especificarlo */
-  font-size: 16px;
+/* root es lo mismo que html, pero cuando se coloca como pseudoclase
+tiene un peso superior, invalida al html (obedece al root) */
+:root {
+  font-size: 18px;
 }
+
+/* html {
+  font-size: 16px;
+} */
 
 body {
   color: #212121;
 }
-/* debido a que la etiqueta <a> noo obedece a la herencia */
+
 a {
   color: #212121;
 }
 
 header {
   font-size: 14px;
+  color: #616161;
 }
+
+header a {
+  color: #616161;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #212121;
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
 h1 {
   font-size: 60px;
-  /* font-size: 3.75em; --> debido a que hereda los 16px del html */
 }
 
 h2 {
-  font-size: 2em; /*  ya que vale 32px*/
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1.5em; /*  ya que vale 32px*/
+  font-size: 1.5em;
 }
+/* 
+ol li:first-child {
+  --  para modificar el primero de los li 
+  border: 1px solid red;
+  
+} */
 
-/* un em es un valor relativo, 
-esto quiere decir que si el tamaño de letra que hereda el h1 (hereda de body) es 10px,
-podemos colocarle 2em al fontsize de h1 y su tamaño cambiará a 20px, 
-dublicando asi su tamaño, y h1 prodria heredar a algo interno, que si le coloco 2em su tamaño del hijo del h1 seria de 40px
-por ende el valor es relativo, se tendría body 10px, h1 20px  e hijo de h1 40px*/
-/* El rem toma de referencia el valor mas alejado y lo multiplica, no hereda como el em
-ej: si al html le pongo fontsize 15px, 
-luego sigue el body con fotsize 50px, 
-y dentro un h1 con fontsize 3rem, 
-triplicara el valor del html ya que es el mas lejado,
- el h1 tendria 45px */
+/* 
+ol li:last-child {
+  --  para modificar el ultimo de los li 
+  border: 1px solid red;
+  
+} */
+
+/* 
+ol li:nth-child(4n) {
+  --  Selecciona cada cuarto elemento entre cualquier grupo de hermanos
+  border: 1px solid red;
+  
+} */
+
+/* 
+ol li:nth-child(odd) {
+  --  para modificar los impares
+  border: 1px solid red;
+  
+} */
+
+/* 
+ol li:nth-child(even) {
+  --  para modificar los pares
+  border: 1px solid red;
+  
+} */
