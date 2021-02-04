@@ -1,33 +1,31 @@
-/* root es lo mismo que html, pero cuando se coloca como pseudoclase
-tiene un peso superior, invalida al html (obedece al root) */
 :root {
   font-size: 18px;
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
 }
 
-/* html {
-  font-size: 16px;
-} */
-
 body {
-  color: #212121;
+  color: var(--gray30);
 }
 
 a {
-  color: #212121;
+  color: var(--gray30);
 }
 
 header {
+  /* --gray10: red;  */ /* asignandole solo en esta seccion otro color a la variable */
   font-size: 14px;
-  color: #616161;
+  color: var(--gray10);
 }
 
 header a {
-  color: #616161;
+  color: var(--gray10);
   text-decoration: none;
 }
 
 header a:hover {
-  color: #212121;
+  color: var(--gray);
 }
 
 nav details summary {
@@ -45,37 +43,3 @@ h2 {
 h3 {
   font-size: 1.5em;
 }
-/* 
-ol li:first-child {
-  --  para modificar el primero de los li 
-  border: 1px solid red;
-  
-} */
-
-/* 
-ol li:last-child {
-  --  para modificar el ultimo de los li 
-  border: 1px solid red;
-  
-} */
-
-/* 
-ol li:nth-child(4n) {
-  --  Selecciona cada cuarto elemento entre cualquier grupo de hermanos
-  border: 1px solid red;
-  
-} */
-
-/* 
-ol li:nth-child(odd) {
-  --  para modificar los impares
-  border: 1px solid red;
-  
-} */
-
-/* 
-ol li:nth-child(even) {
-  --  para modificar los pares
-  border: 1px solid red;
-  
-} */
