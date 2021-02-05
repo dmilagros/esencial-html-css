@@ -87,3 +87,20 @@ pre {
   /* background-position: left bottom; --> abajo a la izquierda*/
   height: 350px;
 }
+/* se le agrega los guiones de esta manera, debido a que no apararecerá en la semantica del HTML */
+h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  display: block;
+  background: var(--gray30);
+}
+/* 
+h3::before {
+  content: "-";
+} */
+
+/* ::selection {
+  background: green;
+}
+ */
