@@ -73,3 +73,17 @@ h2 {
 h3 {
   font-size: 1.5em;
 }
+
+pre {
+  background: #fec62e;
+}
+
+.hero {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent),
+    url("../images/pattern.png");
+  /* background-repeat: no-repeat; */
+  /* esto quiere decir que estará 50px separado de la izquierda y 50pz separado de abajo */
+  /* background-position: left 50px bottom 50px; */
+  /* background-position: left bottom; --> abajo a la izquierda*/
+  height: 350px;
+}
