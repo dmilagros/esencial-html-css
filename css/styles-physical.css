@@ -100,6 +100,16 @@ blockquote {
   font-size: 24px;
   margin: 32px 0;
   padding-left: 16px;
+  line-height: 24px;
+  border-left: 4px solid var(--gray30);
+}
+
+blockquote span {
+  color: var(--gray10);
+}
+
+blockquote span::before {
+  content: "-";
 }
 
 .hero {
@@ -136,18 +146,20 @@ blockquote {
 .section-content {
   counter-reset: titleList;
 }
+
 .section-content h3 {
   counter-increment: titleList;
+  padding-bottom: 4px;
 }
 
 .section-content h3::after {
   content: "";
-  width: 80px;
+  width: 32px;
   height: 4px;
-  display: block;
   background: var(--gray30);
+  display: inline-block;
 }
 
 .section-content h3::before {
-  content: counter(titleList);
+  content: counter(titleList, decimal) ". ";
 }
