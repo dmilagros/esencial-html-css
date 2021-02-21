@@ -33,6 +33,11 @@
   --gray10: #616161;
 }
 
+html {
+  /* smooth scroll */
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--gray30);
   font-family: "Roboto", sans-serif;
@@ -75,7 +80,7 @@ header a {
 }
 
 header a:hover {
-  color: var(--gray);
+  color: var(--gray30);
 }
 
 nav details summary {
@@ -124,7 +129,7 @@ h3 {
 pre {
   background: #fec62e;
   padding: 40px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   line-height: 24px;
 }
 
@@ -187,7 +192,11 @@ blockquote span::before {
 }
 
 .hero {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent),
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
     url("../images/pattern.png");
   height: 350px;
 }
@@ -227,6 +236,10 @@ blockquote span::before {
   padding-bottom: 8px;
 }
 
+.section-content h3::before {
+  content: counter(titleList, decimal) ". ";
+}
+
 .section-content h3::after {
   content: "";
   width: 80px;
@@ -236,8 +249,4 @@ blockquote span::before {
   position: absolute;
   left: 0;
   bottom: 0;
-}
-
-.section-content h3::before {
-  content: counter(titleList, decimal) ". ";
 }
