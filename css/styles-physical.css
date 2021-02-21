@@ -112,6 +112,15 @@ blockquote span::before {
   content: "-";
 }
 
+.debug {
+  /* Colocar a la etiqueta que se quiera revisar */
+  box-shadow: inset 0 0 0 1px red;
+  outline: 1px solid red;
+  background: red;
+  /* border: 1px solid red !important;
+  box-sizing: border-box; */
+}
+
 .hero {
   background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent),
     url("../images/pattern.png");
